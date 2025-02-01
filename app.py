@@ -561,19 +561,47 @@ def lab_subject_page():
 # Main Function
 def main():
     st.set_page_config(
-        page_title="Internal Marks Calculator",
+        page_title="CUI Internal Marks Calculator",
         layout="wide",
         initial_sidebar_state="expanded",)
+
+
 #---------------------------------------------------------------------------------------------#
 #---------------------------------------------------------------------------------------------#
      # Main Section with Title and Buttons
     st.markdown(
     """
-    <h1 style="text-align: center; color: #333333; font-weight: bold; font-size: 50px;">
+    <h1 style="text-align: center; color: #333333; font-weight: bold; font-size: 52px;">
         CUI Internal Marks Calculator
     </h1>
     """,
     unsafe_allow_html=True)
+
+#---------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------#
+    st.markdown(
+    """
+    <style>
+        .toast-box {
+            text-align: justify;
+            background-color: #f0f0f5;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <div class="toast-box">
+        <b>📌 Instructions:</b><br>
+        🔹First, click on <b>➕ Add Quiz</b> to add a new quiz.<br>
+        🔹Enter the marks for the first quiz and then press the <b>Tab</b> button on keyboard ⌨️.<br>
+        🔹After this, the second quiz input will automatically appear 🔽.<br>
+        🔹Assignments, Lab-Assignments will aslo follow the same flow.
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 #---------------------------------------------------------------------------------------------#
 #---------------------------------------------------------------------------------------------#
 #---------------------------------------------------------------------------------------------#
@@ -581,12 +609,12 @@ def main():
     # Navigation Below Title with Updated Text Size
     st.markdown(
         """
-        <h2 style="text-align: left; color: #333333; font-size: 24px;">
+        <h2 style="text-align: left; color: #333333; font-size: 26px;">
             🔍 Subject Nature:
         </h2>
         """,
         unsafe_allow_html=True)
-
+    
     # Navigation Below Title
     page = st.radio("Select:", ["📝 Theory Subject", "💻 Lab Subject"], horizontal=True)
 
@@ -594,9 +622,8 @@ def main():
         theory_subject_page()
     elif page == "💻 Lab Subject":
         lab_subject_page()
-
-
-
+#---------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------#
 if __name__ == "__main__":
     main()
 #---------------------------------------------------------------------------------------------#
