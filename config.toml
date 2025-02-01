@@ -1,2 +1,7 @@
 [theme]
-base="light"
+base="light"  # Forces Light Mode
+primaryColor="#4CAF50"  # Optional: Customize colors
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F0F2F6"
+textColor="#000000"
+font="sans serif"
