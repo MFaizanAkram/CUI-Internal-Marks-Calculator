@@ -331,7 +331,7 @@ def lab_subject_page():
         text-align: justify;}
     </style>
     <div class="justified-text">
-        This dashboard calculates internal marks of Comsats University Islamabad. This is just for an idea.
+        This dashboard calculates the internal marks for COMSATS University Islamabad and serves as a conceptual tool.
     </div>
     """,
     unsafe_allow_html=True)
